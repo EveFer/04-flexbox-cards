@@ -1,0 +1,68 @@
+body {
+    box-sizing: border-box; /*Esto permitirar que cuando agreguemos padding, no afecte al ancho de nuestros elementos*/
+    background-color: #f2f2f2;
+}
+
+.contenedor {
+    max-width: 1100px;
+    margin: 0 auto; /*centrar*/
+}
+
+img {
+    max-width: 100%;
+}
+
+
+h2 {
+    flex: 0 1 100%;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-family: 'Libre Baskerville', serif;
+    margin: 0;
+    font-weight: 700;
+}
+
+@media screen and (min-width:480px) {
+    /* Esto es para que tenga 2 cards en 480px en adelante */
+    .contenido-principal {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .entrada {
+        flex: 0 1 calc(50% - 1rem);
+    }
+}
+@media screen and (min-width:768px) {
+    /* Esto es para que tenga 3 cards en 480px en adelante */
+    .entrada {
+        flex: 0 1 calc(33% - 1rem);
+    }
+}
+.contenido {
+    background-color: white;
+    margin-bottom: 1rem;
+    text-align: center;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+.contenido h3 {
+    font-size: .9rem;
+    line-height: 1.4rem;
+}
+.contenido span {
+    color:  #db08db;
+}
+.boton {
+    background-color: #008fd1;
+    color: #fff;
+    padding: .6rem 3rem;
+    margin-top: 1rems;
+    display: inline-block; 
+    /* Los enlace 'a' por defecto tienen un display:inline entonce se le co
+    coloca inline-block para respete el margin que se le da */
+    text-decoration: none;
+}
